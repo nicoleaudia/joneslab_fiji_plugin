@@ -3,9 +3,9 @@ This is a ImageJ2 plugin called "Jones Lab Segmentation". The purpose of the plu
 
 SAM: A. Kirillov et al., "Segment Anything," 2023 IEEE/CVF International Conference on Computer Vision (ICCV), Paris, France, 2023, pp. 3992-4003, doi: 10.1109/ICCV51070.2023.00371. 
 
-SAM github: https://github.com/facebookresearch/segment-anything
+SAM code in Github, licensed under Apache 2.0: https://github.com/facebookresearch/segment-anything
 
-micro_sam: Segment Anything for Microscopy Anwai Archit, Sushmita Nair, Nabeel Khalid, Paul Hilt, Vikas Rajashekar, Marei Freitag, Sagnik Gupta, Andreas Dengel, Sheraz Ahmed, Constantin Pape bioRxiv 2023.08.21.554208; doi: https://doi.org/10.1101/2023.08.21.554208
+micro_sam code in Github, licensed under MIT: Segment Anything for Microscopy Anwai Archit, Sushmita Nair, Nabeel Khalid, Paul Hilt, Vikas Rajashekar, Marei Freitag, Sagnik Gupta, Andreas Dengel, Sheraz Ahmed, Constantin Pape bioRxiv 2023.08.21.554208; doi: https://doi.org/10.1101/2023.08.21.554208
 
 micro_sam github: https://github.com/computational-cell-analytics/micro-sam
 \
