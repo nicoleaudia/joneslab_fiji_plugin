@@ -1,0 +1,87 @@
+# Directories / environment files
+/data/
+/figures_and_videos/
+/my_imperial_docs/
+/miniforge3/
+/miniconda3/
+/Miniforge3-Linux-x86_64.sh
+/venv/
+/.vscode/
+/vscode/
+/your-keystore.jks
+/cache_embed_usam/
+/CACHE_micro_sam/
+/custom_weights_usam/
+/slurm_file.sh
+/slurm_output/
+/keeping_slurm_outputs/
+/.metadata/
+/.m2/
+/FIJI_plugin.webm
+/micro_sam_code/
+/PHANTAST-FIJI/
+/pyimagejnotebooks/
+/jones_workflow_msc/
+/.adapted_macro.ijm.swp
+/.ipynb_checkpoints/
+/saved_backups/
+__pycache__/
+*.py[cod]
+experiment_dir1_what/
+/example-imagej-command/.vscode/
+models/
+modelsNew/
+micro-sam/
+torch-em/
+elf/
+utils/.ipynb_checkpoints
+utils/__pycache__/
+utils/filepaths.py
+
+# Checkpoints (too large)
+/checkpoints
+old_weights_only.pt
+final_weights_only.pt
+final_weightsonly.pt
+
+# Local helper files
+verify_checkpoints.py
+test_dilate.py
+just_gt.py
+save.py
+imageproperties.py
+testing123.py
+create_test_folders.py
+split_stack.py
+nma_notebook_inference.ipynb
+notebook_inference.ipynb
+get_area.py
+inspect_checkpoint.ipynb
+plot_checkpoint.ipynb
+nma_notebook_inference.ipynb
+only_area_gt.py
+testing_pythonscript.py
+
+# Old files (backups)
+old_jones_analysis_models.py
+old_just_segment.ipynb
+old_just_segment.py
+old_current_jones_analysis.ipynb
+old_nma_inference.py
+
+
+# Not part of my project
+# Modified cellpose3 notebook with Jones data
+run_cellpose3.ipynb
+NMA_run_cellpose3.ipynb
+# Modified micro_sam notebooks with Jones data
+sam_finetuning.ipynb
+NMA_sam_finetuning.ipynb
+NMA_automatic_segmentation.ipynb 
+inference_and_evaluation_PLAIN.ipynb
+torch_em/
+
+# Other
+__init__.py
+filepaths.py
+/fresh-clone

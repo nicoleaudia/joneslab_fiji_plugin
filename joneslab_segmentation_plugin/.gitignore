@@ -1,0 +1,7 @@
+/.classpath
+/.project
+/.settings/
+/target/
+*.sha1
+*.pom
+*.jar

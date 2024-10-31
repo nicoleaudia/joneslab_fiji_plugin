@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>31.1.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>com.github.nicoleaudia</groupId>        <!-- FIXME: Your organization groupId here -->
+	<artifactId>joneslabtool</artifactId> <!-- FIXME: Your project artifactId here   -->
+	<version>0.1.0-SNAPSHOT</version>
+
+	<name>Jones Lab</name>                                               <!-- FIXME: Your project name here          -->
+	<description>A Maven project implementing an ImageJ command for the Jones Lab.</description> <!-- FIXME: Your project description here   -->
+	<url>https://github.com/nicoleaudia/Jones_lab_FIJI_plugin_segmentation</url>                   <!-- FIXME: Your project website here       -->
+	<inceptionYear>2017</inceptionYear>                                        <!-- FIXME: Your project starting year here -->
+	<organization>
+		<name>Imperial College London</name>           <!-- FIXME: Your organization name here    -->
+		<url>https://www.imperial.ac.uk</url> <!-- FIXME: Your organization website here -->
+	</organization>
+	<licenses>
+		<license>                         <!-- FIXME: Your license here -->
+			<name>MIT</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<!-- See https://imagej.net/Team -->
+		<developer>
+			<id>nicoleaudia</id>                                          <!-- FIXME: Your GitHub handle here -->
+			<name>Nicole Audia</name>                            <!-- FIXME: Your name here          -->
+			<url>https://github.com/nicoleaudia/</url> <!-- FIXME: Your website here       -->
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>None</name>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/tag/imagej</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>sscm:git:git://github.com/nicoleaudia/Practice-plugin-joneslab.git</connection>
+		<developerConnection>scm:git:git@github.com:nicoleaudia/Practice-plugin-joneslab.git</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/nicoleaudia/Practice-plugin-joneslab</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/nicoleaudia/Practice-plugin-joneslab/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+	<properties>
+		<package-name>com.imperial.joneslab</package-name>                   <!-- FIXME: Your project package prefix here -->
+		<main-class>com.imperial.joneslab.MlSegmentation</main-class>        <!-- FIXME: Your project main class here, or delete for none -->
+		<license.licenseName>MIT</license.licenseName>                      <!-- FIXME: Your license-maven-plugin license code here -->
+		<license.copyrightOwners>Imperial College London</license.copyrightOwners> <!-- FIXME: Your organization legal entity name here -->
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+            <groupId>org.scijava</groupId>
+            <artifactId>scijava-common</artifactId>
+            <version>2.90.1</version>
+        </dependency>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej-legacy</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.py4j</groupId>
+			<artifactId>py4j</artifactId>
+			<version>0.10.9.3</version>
+		</dependency>
+ </dependencies>
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>META-INF/*.SF</exclude>
+										<exclude>META-INF/*.DSA</exclude>
+										<exclude>META-INF/*.RSA</exclude>
+									</excludes>
+								</filter>
+							</filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jarsigner-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<archive>${project.build.directory}/${project.build.finalName}.jar</archive>
+					<keystore>${env.KEYSTORE_PATH}</keystore>
+					<storepass>${env.STOREPASS}</storepass>
+					<alias>nma23</alias>
+					<keypass>${env.KEYPASS}</keypass>
+				</configuration>
+        	</plugin>
+        </plugins>
+    </build>
+</project>
