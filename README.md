@@ -10,6 +10,9 @@ micro_sam code in Github, licensed under MIT: Segment Anything for Microscopy An
 micro_sam github: https://github.com/computational-cell-analytics/micro-sam
 \
 \
+This plugin was developed based on this template: https://github.com/imagej/example-imagej2-command
+\
+\
 The following models are available in **v1** of the plugin: vit_b, vit_b_lm, vit_l
 We recommend choosing vit_l for high segmentation accuracy but slower speed, and vit_b for lower accuracy but faster speed
 \
