@@ -10,8 +10,7 @@ micro_sam: Segment Anything for Microscopy Anwai Archit, Sushmita Nair, Nabeel K
 micro_sam github: https://github.com/computational-cell-analytics/micro-sam
 \
 \
-The following models are available in **v1** of the plugin: vit_b, vit_b_lm, vit_l
-We recommend choosing vit_l for high segmentation accuracy but slower speed, and vit_b for lower accuracy but faster speed
+The following models are available in **v1** of the plugin: vit_b, vit_b_lm, vit_l. We recommend choosing vit_l for high segmentation accuracy but slower speed, and vit_b for lower accuracy but faster speed
 \
 \
 Unless otherwise specified, all downloadable components can be found at the following **Google drive link:** https://drive.google.com/drive/folders/1uvY-v1HL_elnM82J4yAdAga7uDKibkwB?usp=share_link
@@ -37,14 +36,14 @@ Unless otherwise specified, all downloadable components can be found at the foll
   
   <li> Download macro
     <ol>
-      <li>Via Github: *insert link* </li>
+      <li>Via Github (current repository) </li>
       <li>Save as macro in FIJI under the Plugins menu</li>
     </ol>
   </li>
 
   <li> Download supporting folder (plugin_dir)
     <ol>
-      <li>Via Github: https://github.com/nicoleaudia/msc_prj_jones_workflow/tree/clean-branch </li>
+      <li>Via Github (current repository) </li>
       <li>Install at  /Applications/Fiji.app (full filepath will be /Applications/Fiji.app/plugin_dir)</li>
     </ol>
   </li>
@@ -59,7 +58,7 @@ Unless otherwise specified, all downloadable components can be found at the foll
 
   <li>Download model(s)
     <ol>
-      <li> Via Google Drive </li>
+      <li> Via Google Drive (pt file(s))</li>
       <li> Install at /Applications/Fiji.app/plugin_dir </li>
       <li> If you choose to save the models at a different location: 
         <ol>
@@ -67,6 +66,7 @@ Unless otherwise specified, all downloadable components can be found at the foll
           <li> Modify model section to point to correct model filepaths </li>
         </ol>
       </li>
+      <li> Note: It is possible to finetune your own version of SAM or micro_sam. If you choose to do this, you will need to modify the plugin to point to your new model filepaths. </li>
     </ol>
 
   <li>Download bundled python environment (tar.gz)
@@ -108,6 +108,7 @@ Unless otherwise specified, all downloadable components can be found at the foll
 
 <h3> Setup from yaml - not recommended due to dependency challenges </h3>
 <ol>
+  <li> Download FIJI and macro as specified above. </li>
   <li> Clone the repo. </li>
   <li> Build a conda environment from the appropriate yaml file. </li>
   <li> Install any other necessary dependencies (tifffile, natsort, etc) to the virtual environment. </li>
