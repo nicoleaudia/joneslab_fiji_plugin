@@ -54,8 +54,8 @@ Unless otherwise specified, all downloadable components can be found at the foll
   <li>Download plugin
     <ol>
       <li>Via Google drive (jar file) </li>
-      <li>Install at /Applications/Fiji.app/plugins </li>
-      <li>To confirm it is installed, launch FIJI and look for “Jones Lab Segmentation” </li>
+      <li>Install at /Applications/Fiji.app/plugins (directory should already exist from FIJI installation)</li>
+      <li>To confirm it is installed, launch FIJI and look for “Jones Lab Segmentation” under the Plugins menu</li>
     </ol>
   </li>
 
