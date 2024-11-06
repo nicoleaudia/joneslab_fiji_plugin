@@ -11,7 +11,9 @@ micro_sam github: https://github.com/computational-cell-analytics/micro-sam
 
 This plugin was developed based on this template: https://github.com/imagej/example-imagej2-command
 
-The following models are available in **v1** of the plugin: vit_b, vit_b_lm, vit_l. We recommend choosing vit_l for high segmentation accuracy but slower speed, and vit_b for lower accuracy but faster speed.
+The macro was modified from the macro developed by Olivier at the Jones Lab here: https://github.com/engpol/JonesLabFIJIScripts/blob/main/Receptor_Expression_Macro_MESNA_MAC.
+
+The following finetuned SAM/micro_sam models are available in **v1** of the plugin: vit_b, vit_b_lm, vit_l. We recommend choosing vit_l for high segmentation accuracy but slower speed, and vit_b for lower accuracy but faster speed.
 
 Unless otherwise specified, all downloadable components can be found at the following **Google drive link:** https://drive.google.com/drive/folders/1uvY-v1HL_elnM82J4yAdAga7uDKibkwB?usp=share_link
 
