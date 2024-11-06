@@ -7,9 +7,6 @@ import sys
 
 print('Imported all functions.')
 
-# For MacOS
-# device = torch.device("mps")
-
 if torch.backends.mps.is_available():
     device = torch.device("mps")
 elif torch.cuda.is_available():
@@ -47,38 +44,25 @@ def main():
 
     # Load checkpoint based on model_id
     if model_id == "finetuned_vit_b":
-        checkpoint_path = '/vol/biomedic3/bglocker/mscproj24/nma23/data/testing_directory/multi_model/finetuning/models_vit_b_patch/checkpoints/vit_b_patch_checkpoint/best.pt'
+        checkpoint_path = '/Applications/Fiji.app/plugin_dir/vit_b_weightsonly.pt'
         pred_iou_thresh = 0.425
         stability_score_thresh = 0.65
-        # checkpoint_path = '/Users/nicoleaudia/checkpoints/finetuned_vit_b/best.pt'
     elif model_id == "finetuned_vit_b_lm":
-        checkpoint_path = '/vol/biomedic3/bglocker/mscproj24/nma23/data/testing_directory/multi_model/finetuning/models_vit_b_lm_patch/checkpoints/vit_b_lm_patch_checkpoint/best.pt'
+        checkpoint_path = '/Applications/Fiji.app/plugin_dir/vit_b_lm_weightsonly.pt'
         pred_iou_thresh = 0.4
         stability_score_thresh = 0.5
-        # checkpoint_path = '/Users/nicoleaudia/checkpoints/finetuned_vit_b_lm/best.pt'
     elif model_id == "finetuned_vit_l":
-        # checkpoint_path = '/vol/biomedic3/bglocker/mscproj24/nma23/data/testing_directory/multi_model/finetuning/models_vit_l_patch/checkpoints/vit_l_patch_checkpoint/best.pt'
-        # checkpoint_path = '/vol/biomedic3/bglocker/mscproj24/nma23/models_vit_l_patch_other_folder/checkpoints/vit_l_patch_checkpoint/best.pt'
-        checkpoint_path = '/Users/nicoleaudia/final_weightsonly.pt'
-        # pred_iou_thresh = 0.525
+        checkpoint_path = '/Applications/Fiji.app/plugin_dir/vit_l_weightsonly.pt'
         pred_iou_thresh = 0.8
         stability_score_thresh = 0.725
     elif model_id == "finetuned_vit_l_lm":
-        checkpoint_path = '/vol/biomedic3/bglocker/mscproj24/nma23/data/testing_directory/multi_model/finetuning/models_vit_l_lm_patch/checkpoints/vit_l_lm_patch_checkpoint/best.pt'
+        checkpoint_path = '/Applications/Fiji.app/plugin_dir/vit_l_lm_weightsonly.pt'
         pred_iou_thresh = 0.45
         stability_score_thresh = 0.675
-        # checkpoint_path = '/Users/nicoleaudia/checkpoints/finetuned_vit_l_lm/best.pt'
     else:
         checkpoint_path = None
         pred_iou_thresh = 0.75
         stability_score_thresh = 0.75
-
-    # Load thresholds if checkpoint path is not None
-    # if checkpoint_path is not None:
-    #     pred_iou_thresh, stability_score_thresh = load_thresholds(model_id, thresholds_dir=thresholds_dir)
-    # else:
-    #     pred_iou_thresh = 0.75 
-    #     stability_score_thresh = 0.75
 
     # Only need option for finetuned ViT model - PHANTAST will be handled by macro, other models not available
     if "vit_" in model_id:
