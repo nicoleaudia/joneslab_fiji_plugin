@@ -12,20 +12,20 @@
 		<relativePath />
 	</parent>
 
-	<groupId>com.github.nicoleaudia</groupId>        <!-- FIXME: Your organization groupId here -->
-	<artifactId>joneslabtool</artifactId> <!-- FIXME: Your project artifactId here   -->
+	<groupId>com.github.nicoleaudia</groupId> 
+	<artifactId>joneslabtool</artifactId> 
 	<version>0.1.0-SNAPSHOT</version>
 
-	<name>Jones Lab</name>                                               <!-- FIXME: Your project name here          -->
-	<description>A Maven project implementing an ImageJ command for the Jones Lab.</description> <!-- FIXME: Your project description here   -->
-	<url>https://github.com/nicoleaudia/Jones_lab_FIJI_plugin_segmentation</url>                   <!-- FIXME: Your project website here       -->
-	<inceptionYear>2017</inceptionYear>                                        <!-- FIXME: Your project starting year here -->
+	<name>Jones Lab</name>                                              
+	<description>A Maven project implementing an ImageJ command for the Jones Lab.</description> 
+	<url>https://github.com/nicoleaudia/Jones_lab_FIJI_plugin_segmentation</url>                   
+	<inceptionYear>2017</inceptionYear>                                       
 	<organization>
-		<name>Imperial College London</name>           <!-- FIXME: Your organization name here    -->
-		<url>https://www.imperial.ac.uk</url> <!-- FIXME: Your organization website here -->
+		<name>Imperial College London</name>           
+		<url>https://www.imperial.ac.uk</url> 
 	</organization>
 	<licenses>
-		<license>                         <!-- FIXME: Your license here -->
+		<license>                         
 			<name>MIT</name>
 			<url>https://opensource.org/licenses/MIT</url>
 			<distribution>repo</distribution>
@@ -35,9 +35,9 @@
 	<developers>
 		<!-- See https://imagej.net/Team -->
 		<developer>
-			<id>nicoleaudia</id>                                          <!-- FIXME: Your GitHub handle here -->
-			<name>Nicole Audia</name>                            <!-- FIXME: Your name here          -->
-			<url>https://github.com/nicoleaudia/</url> <!-- FIXME: Your website here       -->
+			<id>nicoleaudia</id>                                         
+			<name>Nicole Audia</name>                            
+			<url>https://github.com/nicoleaudia/</url> 
 			<roles>
 				<role>developer</role>
 			</roles>
@@ -71,10 +71,10 @@
 	</ciManagement>
 
 	<properties>
-		<package-name>com.imperial.joneslab</package-name>                   <!-- FIXME: Your project package prefix here -->
-		<main-class>com.imperial.joneslab.MlSegmentation</main-class>        <!-- FIXME: Your project main class here, or delete for none -->
-		<license.licenseName>MIT</license.licenseName>                      <!-- FIXME: Your license-maven-plugin license code here -->
-		<license.copyrightOwners>Imperial College London</license.copyrightOwners> <!-- FIXME: Your organization legal entity name here -->
+		<package-name>com.imperial.joneslab</package-name>                   
+		<main-class>com.imperial.joneslab.MlSegmentation</main-class>        
+		<license.licenseName>MIT</license.licenseName>                      
+		<license.copyrightOwners>Imperial College London</license.copyrightOwners> 
 	</properties>
 
 	<repositories>
