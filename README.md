@@ -1,17 +1,5 @@
 # Overview
-This is a ImageJ2 plugin called "Jones Lab Segmentation". The purpose of the plugin is to perform whole cell segmentation on phase contrast microscopy images. This plugin implements finetuned SAM and micro_sam models as FIJI/ImageJ plugins. These models were trained specifically for HEK293 cells from the Jones lab. Credit to the original models goes as follows:
-
-SAM: A. Kirillov et al., "Segment Anything," 2023 IEEE/CVF International Conference on Computer Vision (ICCV), Paris, France, 2023, pp. 3992-4003, doi: 10.1109/ICCV51070.2023.00371. 
-
-SAM code in Github, licensed under Apache 2.0: https://github.com/facebookresearch/segment-anything
-
-micro_sam code in Github, licensed under MIT: Segment Anything for Microscopy Anwai Archit, Sushmita Nair, Nabeel Khalid, Paul Hilt, Vikas Rajashekar, Marei Freitag, Sagnik Gupta, Andreas Dengel, Sheraz Ahmed, Constantin Pape bioRxiv 2023.08.21.554208; doi: https://doi.org/10.1101/2023.08.21.554208
-
-micro_sam github: https://github.com/computational-cell-analytics/micro-sam
-
-This plugin was developed based on this template: https://github.com/imagej/example-imagej2-command
-
-The macro was modified from the macro developed by Olivier at the Jones Lab here: https://github.com/engpol/JonesLabFIJIScripts/blob/main/Receptor_Expression_Macro_MESNA_MAC.
+This is a ImageJ2 plugin called "Jones Lab Segmentation". The purpose of the plugin is to perform whole cell segmentation on phase contrast microscopy images. This plugin implements finetuned SAM and micro_sam models as FIJI/ImageJ plugins. These models were trained specifically for HEK293 cells from the Jones lab. Credit to the original models and sources can be found at the bottom of the README.
 
 The following finetuned SAM/micro_sam models are available in **v1** of the plugin: vit_b, vit_b_lm, vit_l. We recommend choosing vit_l for high segmentation accuracy but slower speed, and vit_b for lower accuracy but faster speed.
 
@@ -132,3 +120,16 @@ Unless otherwise specified, all downloadable components can be found at the foll
    1. Ensure correct model name and data filepaths are specified. Model choices are **finetuned_vit_b**, **finetuned_vit_b_lm**,  **finetuned_vit_l**, and **PHANTAST** (dependent on which model(s) and/or PHANTAST you have downloaded).
 4. Run! Progress will be shown in the console and any necessary new folders/data will be created automatically. This could take several minutes per batch (3 images at a time).
 
+# Works Cited
+
+SAM: A. Kirillov et al., "Segment Anything," 2023 IEEE/CVF International Conference on Computer Vision (ICCV), Paris, France, 2023, pp. 3992-4003, doi: 10.1109/ICCV51070.2023.00371. 
+
+SAM code in Github, licensed under Apache 2.0: https://github.com/facebookresearch/segment-anything
+
+Segment Anything for Microscopy Anwai Archit, Sushmita Nair, Nabeel Khalid, Paul Hilt, Vikas Rajashekar, Marei Freitag, Sagnik Gupta, Andreas Dengel, Sheraz Ahmed, Constantin Pape bioRxiv 2023.08.21.554208; doi: https://doi.org/10.1101/2023.08.21.554208
+
+micro_sam code in Github, licensed under MIT: https://github.com/computational-cell-analytics/micro-sam
+
+This ImageJ2 plugin was developed based on this template: https://github.com/imagej/example-imagej2-command
+
+The macro was modified from the macro developed by Olivier at the Jones Lab here: https://github.com/engpol/JonesLabFIJIScripts/blob/main/Receptor_Expression_Macro_MESNA_MAC.
